@@ -19,6 +19,9 @@
 		89AE6FDD2B95E2950036D190 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE6FDC2B95E2950036D190 /* GFBodyLabel.swift */; };
 		89AE6FDF2B95E3AC0036D190 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE6FDE2B95E3AC0036D190 /* GFAlertVC.swift */; };
 		89AE6FE12B95EBF40036D190 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE6FE02B95EBF40036D190 /* UIViewController+Ext.swift */; };
+		89AE6FE82B95FB3A0036D190 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE6FE72B95FB3A0036D190 /* Follower.swift */; };
+		89AE6FEA2B95FCF40036D190 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE6FE92B95FCF40036D190 /* User.swift */; };
+		89AE6FED2B960A150036D190 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE6FEC2B960A150036D190 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		89AE6FDC2B95E2950036D190 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		89AE6FDE2B95E3AC0036D190 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		89AE6FE02B95EBF40036D190 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		89AE6FE72B95FB3A0036D190 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		89AE6FE92B95FCF40036D190 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		89AE6FEC2B960A150036D190 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +74,13 @@
 		895FA4C32B911B5F004C080D /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				89AE6FEB2B9609FB0036D190 /* Managers */,
+				89AE6FE62B95FB2A0036D190 /* Model */,
 				89AE6FE52B95F5BF0036D190 /* Support */,
 				89AE6FE42B95F53F0036D190 /* Extensions */,
 				89AE6FE32B95F4FD0036D190 /* Custom Views */,
 				89AE6FE22B95F4B70036D190 /* Screens */,
+				895FA4D22B911B60004C080D /* Info.plist */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -109,12 +118,28 @@
 		89AE6FE52B95F5BF0036D190 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				895FA4D22B911B60004C080D /* Info.plist */,
 				895FA4CD2B911B60004C080D /* Assets.xcassets */,
 				895FA4C62B911B5F004C080D /* SceneDelegate.swift */,
 				895FA4C42B911B5F004C080D /* AppDelegate.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		89AE6FE62B95FB2A0036D190 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89AE6FE72B95FB3A0036D190 /* Follower.swift */,
+				89AE6FE92B95FCF40036D190 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89AE6FEB2B9609FB0036D190 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				89AE6FEC2B960A150036D190 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +225,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -209,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89AE6FEA2B95FCF40036D190 /* User.swift in Sources */,
 				89497A122B920D10006859E6 /* GFTextField.swift in Sources */,
 				8990C4492B938EC200483221 /* FollowerListVC.swift in Sources */,
 				8937AC532B91EEF10084C096 /* FavoritesListVC.swift in Sources */,
@@ -216,7 +242,9 @@
 				89497A102B92080F006859E6 /* GFButton.swift in Sources */,
 				89AE6FDF2B95E3AC0036D190 /* GFAlertVC.swift in Sources */,
 				89AE6FDD2B95E2950036D190 /* GFBodyLabel.swift in Sources */,
+				89AE6FE82B95FB3A0036D190 /* Follower.swift in Sources */,
 				8990C44B2B9395A100483221 /* GFTitleLabel.swift in Sources */,
+				89AE6FED2B960A150036D190 /* NetworkManager.swift in Sources */,
 				8937AC512B91EE600084C096 /* SearchVC.swift in Sources */,
 				895FA4C52B911B5F004C080D /* AppDelegate.swift in Sources */,
 				895FA4C72B911B5F004C080D /* SceneDelegate.swift in Sources */,
