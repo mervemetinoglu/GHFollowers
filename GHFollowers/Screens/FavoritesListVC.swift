@@ -87,8 +87,7 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCell.EditingStyle,
-                   forRowAt indexPath: IndexPath)
-    {
+                   forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
 
         let favorite = favorites[indexPath.row]
