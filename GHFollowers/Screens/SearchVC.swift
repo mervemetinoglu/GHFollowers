@@ -27,6 +27,7 @@ class SearchVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        usernameTextField.text = ""
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
@@ -42,6 +43,8 @@ class SearchVC: UIViewController {
                                        buttonTitle: "OK")
             return
         }
+
+        usernameTextField.resignFirstResponder()
 
         let followerListVC = FollowerListVC()
         followerListVC.username = usernameTextField.text
