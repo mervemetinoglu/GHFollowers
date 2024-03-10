@@ -100,9 +100,9 @@
 		8914A7B92B9785A1008ED9E7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				896A0D1B2B98AA0700A509AF /* UIHelper.swift */,
-				898CA56A2B99E622002DAEB5 /* GFError.swift */,
 				898CA5702B99F940002DAEB5 /* Constants.swift */,
+				898CA56A2B99E622002DAEB5 /* GFError.swift */,
+				896A0D1B2B98AA0700A509AF /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -110,8 +110,8 @@
 		8914A7BC2B97A814008ED9E7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8914A7BD2B97A841008ED9E7 /* FollowerCell.swift */,
 				895FE63F2B9B423F00AE306B /* FavoriteCell.swift */,
+				8914A7BD2B97A841008ED9E7 /* FollowerCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -135,14 +135,14 @@
 		895FA4C32B911B5F004C080D /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				8914A7B92B9785A1008ED9E7 /* Utilities */,
+				89AE6FE32B95F4FD0036D190 /* Custom Views */,
+				89AE6FE42B95F53F0036D190 /* Extensions */,
+				895FA4D22B911B60004C080D /* Info.plist */,
 				89AE6FEB2B9609FB0036D190 /* Managers */,
 				89AE6FE62B95FB2A0036D190 /* Model */,
-				89AE6FE52B95F5BF0036D190 /* Support */,
-				89AE6FE42B95F53F0036D190 /* Extensions */,
-				89AE6FE32B95F4FD0036D190 /* Custom Views */,
 				89AE6FE22B95F4B70036D190 /* Screens */,
-				895FA4D22B911B60004C080D /* Info.plist */,
+				89AE6FE52B95F5BF0036D190 /* Support */,
+				8914A7B92B9785A1008ED9E7 /* Utilities */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -158,9 +158,9 @@
 		896A0D1D2B98F4C900A509AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				895FE6442B9B987500AE306B /* GFAlertContainerView.swift */,
 				896A0D232B98F54200A509AF /* GFEmptyStateView.swift */,
 				898CA5722B9A14F8002DAEB5 /* GFItemInfoView.swift */,
-				895FE6442B9B987500AE306B /* GFAlertContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,10 +192,10 @@
 		896A0D212B98F4E700A509AF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				898CA57A2B9A3229002DAEB5 /* ItemInfoVCs */,
-				898CA56C2B99F0B8002DAEB5 /* GFUserInfoHeaderVC.swift */,
 				89AE6FDE2B95E3AC0036D190 /* GFAlertVC.swift */,
 				895FE6462B9BAB5500AE306B /* GFDataLoadingVC.swift */,
+				898CA56C2B99F0B8002DAEB5 /* GFUserInfoHeaderVC.swift */,
+				898CA57A2B9A3229002DAEB5 /* ItemInfoVCs */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -203,9 +203,9 @@
 		896A0D222B98F4FC00A509AF /* Labels */ = {
 			isa = PBXGroup;
 			children = (
-				8990C44A2B9395A100483221 /* GFTitleLabel.swift */,
-				898CA56E2B99F13D002DAEB5 /* GFSecondaryTitleLabel.swift */,
 				89AE6FDC2B95E2950036D190 /* GFBodyLabel.swift */,
+				898CA56E2B99F13D002DAEB5 /* GFSecondaryTitleLabel.swift */,
+				8990C44A2B9395A100483221 /* GFTitleLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -213,9 +213,9 @@
 		898CA57A2B9A3229002DAEB5 /* ItemInfoVCs */ = {
 			isa = PBXGroup;
 			children = (
+				898CA5782B9A31AF002DAEB5 /* GFFollowerItemVC.swift */,
 				898CA5742B9A2959002DAEB5 /* GFItemInfoVC.swift */,
 				898CA5762B9A2E4F002DAEB5 /* GFRepoItemVC.swift */,
-				898CA5782B9A31AF002DAEB5 /* GFFollowerItemVC.swift */,
 			);
 			path = ItemInfoVCs;
 			sourceTree = "<group>";
@@ -223,9 +223,9 @@
 		89AE6FE22B95F4B70036D190 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				8937AC502B91EE600084C096 /* SearchVC.swift */,
 				8937AC522B91EEF10084C096 /* FavoritesListVC.swift */,
 				8990C4482B938EC200483221 /* FollowerListVC.swift */,
+				8937AC502B91EE600084C096 /* SearchVC.swift */,
 				898CA5682B99DBCA002DAEB5 /* UserInfoVC.swift */,
 			);
 			path = Screens;
@@ -249,10 +249,10 @@
 		89AE6FE42B95F53F0036D190 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				89AE6FE02B95EBF40036D190 /* UIViewController+Ext.swift */,
 				898CA57B2B9A5B8E002DAEB5 /* Date+Ext.swift */,
-				895FE6482B9BB3AA00AE306B /* UIView+Ext.swift */,
 				897CEAC12B9CD1F4006D8C61 /* UITableView+Ext.swift */,
+				895FE6482B9BB3AA00AE306B /* UIView+Ext.swift */,
+				89AE6FE02B95EBF40036D190 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -260,9 +260,9 @@
 		89AE6FE52B95F5BF0036D190 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				895FA4C42B911B5F004C080D /* AppDelegate.swift */,
 				895FA4CD2B911B60004C080D /* Assets.xcassets */,
 				895FA4C62B911B5F004C080D /* SceneDelegate.swift */,
-				895FA4C42B911B5F004C080D /* AppDelegate.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -551,8 +551,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,9 +561,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.mervemetinoglu.GHFollowers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -581,8 +585,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,9 +595,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.mervemetinoglu.GHFollowers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
