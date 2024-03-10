@@ -10,11 +10,6 @@ import UIKit
 class GFTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-
-        UITabBar.appearance().standardAppearance = appearance
-        UITabBar.appearance().scrollEdgeAppearance = appearance
         UITabBar.appearance().tintColor = .systemGreen
 
         viewControllers = [createSearchNC(), createFavoritesNC()]
