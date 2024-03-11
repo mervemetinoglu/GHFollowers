@@ -114,7 +114,6 @@ class FollowerListVC: GFDataLoadingVC {
         searchController.obscuresBackgroundDuringPresentation = false
 
         navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
     }
 
     func updateUI(with followers: [Follower]) {
