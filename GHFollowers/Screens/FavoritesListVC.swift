@@ -90,7 +90,8 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCell.EditingStyle,
-                   forRowAt indexPath: IndexPath) {
+                   forRowAt indexPath: IndexPath)
+    {
         guard editingStyle == .delete else { return }
 
         PersistenceManager.updateWith(favorite: favorites[indexPath.row], actionType: .remove) { [weak self] error in
@@ -99,6 +100,11 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
             guard let error = error else {
                 self.favorites.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .left)
+
+                if self.favorites.isEmpty {
+                    self.showEmptyStateView(with: "No Favorites?\nAdd one on the followers screen.", in: self.view)
+                }
+
                 return
             }
             DispatchQueue.main.async {
